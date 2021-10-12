@@ -1,16 +1,15 @@
 # pushnotif
 
-A new Flutter project.
+A Flutter application implementing push notifications using Firebase Cloud Messaging
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# TODO:
+Download XCode
+Setup APNs on iOS
+Setup the iOS version of the SDK
+Test configuration and make sure notifications fire as expected
+Configure FCM project for REST calls
+Create a custom REST API that triggers the FCM messages; use Python or NodeJS - the latter preferred for compatibility with other projects and ease of use with the Firebase SDK
+Test in Dev
+Configure server on Azure
+Deploy and test
+Demo
