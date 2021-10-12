@@ -13,14 +13,16 @@ import 'screens/home.dart';
 Future<void> backgroundHandler(RemoteMessage message) async {
   print(message.notification!.title);
   print(message.notification!.body);
-  print(message.data.toString());
+  print(message.data['screen']);
 }
 
 // main
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp();
   FirebaseMessaging.onBackgroundMessage(backgroundHandler);
+
   runApp(const MyApp());
 }
 
