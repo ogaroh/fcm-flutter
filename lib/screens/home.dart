@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   /// setup the local notification service, firebase messaging (FCM) callbacks and listeners here
   ///
   void initNotifications() async {
-    LocaLNotificationService.initialize(context);
+    LocalNotificationService.initialize(context);
 
     // request permissions on iOS only
     if (Platform.isIOS) {
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
     String? token = await fcm.getToken();
 
     if (token != null) {
-      print(token);
+      print("FCM Registration Token: $token");
     }
 
     // wakes the app from closed / terminated state to show the notification
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
     FirebaseMessaging.onMessage.listen(
       (RemoteMessage message) {
         if (message.notification != null) {
-          LocaLNotificationService.dispatch(message);
+          LocalNotificationService.dispatch(message);
         }
       },
     );

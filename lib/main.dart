@@ -12,8 +12,6 @@ import 'screens/home.dart';
 // receive message when the message is received in the background
 Future<void> backgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
-  print(
-      "---------------------- background handler invoked -------------------");
   print(message.messageId);
 }
 
